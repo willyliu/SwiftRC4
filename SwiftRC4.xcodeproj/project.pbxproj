@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8BCD5B571A67C9BF007BF2BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD5B561A67C9BF007BF2BE /* main.swift */; };
+		8BCD5B5E1A67C9D9007BF2BE /* RC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD5B5D1A67C9D9007BF2BE /* RC4.swift */; };
+		8BCD5B6A1A67CA49007BF2BE /* RC4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD5B691A67CA49007BF2BE /* RC4Tests.swift */; };
+		8BCD5B6F1A67CA87007BF2BE /* RC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD5B5D1A67C9D9007BF2BE /* RC4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		8BCD5B531A67C9BF007BF2BE /* SwiftRC4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftRC4; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BCD5B561A67C9BF007BF2BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8BCD5B5D1A67C9D9007BF2BE /* RC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RC4.swift; sourceTree = "<group>"; };
+		8BCD5B651A67CA49007BF2BE /* RC4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RC4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BCD5B681A67CA49007BF2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BCD5B691A67CA49007BF2BE /* RC4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RC4Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8BCD5B501A67C9BF007BF2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BCD5B621A67CA49007BF2BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCD5B551A67C9BF007BF2BE /* SwiftRC4 */,
+				8BCD5B661A67CA49007BF2BE /* RC4Tests */,
 				8BCD5B541A67C9BF007BF2BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCD5B531A67C9BF007BF2BE /* SwiftRC4 */,
+				8BCD5B651A67CA49007BF2BE /* RC4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +74,26 @@
 			isa = PBXGroup;
 			children = (
 				8BCD5B561A67C9BF007BF2BE /* main.swift */,
+				8BCD5B5D1A67C9D9007BF2BE /* RC4.swift */,
 			);
 			path = SwiftRC4;
+			sourceTree = "<group>";
+		};
+		8BCD5B661A67CA49007BF2BE /* RC4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8BCD5B691A67CA49007BF2BE /* RC4Tests.swift */,
+				8BCD5B671A67CA49007BF2BE /* Supporting Files */,
+			);
+			path = RC4Tests;
+			sourceTree = "<group>";
+		};
+		8BCD5B671A67CA49007BF2BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BCD5B681A67CA49007BF2BE /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +116,23 @@
 			productReference = 8BCD5B531A67C9BF007BF2BE /* SwiftRC4 */;
 			productType = "com.apple.product-type.tool";
 		};
+		8BCD5B641A67CA49007BF2BE /* RC4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BCD5B6B1A67CA49007BF2BE /* Build configuration list for PBXNativeTarget "RC4Tests" */;
+			buildPhases = (
+				8BCD5B611A67CA49007BF2BE /* Sources */,
+				8BCD5B621A67CA49007BF2BE /* Frameworks */,
+				8BCD5B631A67CA49007BF2BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RC4Tests;
+			productName = RC4Tests;
+			productReference = 8BCD5B651A67CA49007BF2BE /* RC4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +143,9 @@
 				ORGANIZATIONNAME = "Willy Liu";
 				TargetAttributes = {
 					8BCD5B521A67C9BF007BF2BE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8BCD5B641A67CA49007BF2BE = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -109,9 +163,20 @@
 			projectRoot = "";
 			targets = (
 				8BCD5B521A67C9BF007BF2BE /* SwiftRC4 */,
+				8BCD5B641A67CA49007BF2BE /* RC4Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BCD5B631A67CA49007BF2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BCD5B4F1A67C9BF007BF2BE /* Sources */ = {
@@ -119,6 +184,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BCD5B571A67C9BF007BF2BE /* main.swift in Sources */,
+				8BCD5B5E1A67C9D9007BF2BE /* RC4.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BCD5B611A67CA49007BF2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BCD5B6A1A67CA49007BF2BE /* RC4Tests.swift in Sources */,
+				8BCD5B6F1A67CA87007BF2BE /* RC4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +289,38 @@
 			};
 			name = Release;
 		};
+		8BCD5B6C1A67CA49007BF2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RC4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8BCD5B6D1A67CA49007BF2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RC4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -231,6 +338,14 @@
 			buildConfigurations = (
 				8BCD5B5B1A67C9BF007BF2BE /* Debug */,
 				8BCD5B5C1A67C9BF007BF2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8BCD5B6B1A67CA49007BF2BE /* Build configuration list for PBXNativeTarget "RC4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BCD5B6C1A67CA49007BF2BE /* Debug */,
+				8BCD5B6D1A67CA49007BF2BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
